@@ -1,6 +1,6 @@
 module.exports = function check(str, bracketsConfig) {
-  var stack = null, i = 0, count = 0;
-  var temp;
+  var stack = [], i = 0, count = 0;
+  var temp, temp2;
   var flag = false;
   while(i < str.length)
   {
@@ -22,7 +22,7 @@ module.exports = function check(str, bracketsConfig) {
 					temp = stack.pop();
 					if(temp == str[i])
 					{
-						count -= 2;
+						count -= 2; 
 						i++;
 					}
 					else{
@@ -35,7 +35,7 @@ module.exports = function check(str, bracketsConfig) {
 			}
 		else{
 				if(str[i] == bracketsConfig[j][0])
-				{
+				{	 
 					stack.push(str[i]);
 					i++;
 					break;
@@ -51,7 +51,7 @@ module.exports = function check(str, bracketsConfig) {
 					}
 					else return false;
 				}
-			}
+			}		
 	 }
   }
   if(stack.length == 0)
