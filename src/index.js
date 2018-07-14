@@ -1,6 +1,6 @@
 module.exports = function check(str, bracketsConfig) {
   var stack = [], i = 0, count = 0;
-  var temp;
+  var temp, feature="feature";
   var flag = false;
   while(i < str.length)
   {
