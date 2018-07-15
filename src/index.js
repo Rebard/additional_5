@@ -1,5 +1,5 @@
 module.exports = function check(str, bracketsConfig) {
-  var stack = [1,2,3], i = 0, count = 0;
+  var stack = [], i = 0, count = 0;
   var temp;
   var flag = false;
   while(i < str.length)
